@@ -61,36 +61,41 @@ def generate_complete_report(
     from datetime import datetime
     
     try:
- 
+        if isinstance(credit_analysis, dict) and 'extract_financial_data_tool_response' in credit_analysis:
+            credit_analysis = credit_analysis['extract_financial_data_tool_response']
+
+        if isinstance(financial_ratios, dict) and 'calculate_all_financial_ratios_response' in financial_ratios:
+            financial_ratios = financial_ratios['calculate_all_financial_ratios_response']
+
         if credit_analysis.get('status') != 'success':
             return {
                 'status': 'error',
                 'error': 'invalid_credit_analysis',
                 'message': 'credit_analysis must have success status'
             }
-        
+
         if financial_ratios.get('status') != 'success':
             return {
                 'status': 'error',
                 'error': 'invalid_financial_ratios',
                 'message': 'financial_ratios must have success status'
             }
-  
+
         empresa = credit_analysis['extracted_data']['empresa']
         duplicata = credit_analysis['extracted_data']['duplicata']
-        
- 
+
+
         risk_level = credit_analysis['risk_level']
-        risk_score = credit_analysis['risk_score']
+        risk_score = float(credit_analysis['risk_score'])
         red_flags = credit_analysis.get('red_flags', [])
         positive_points = credit_analysis.get('positive_points', [])
         critical_notes = credit_analysis.get('critical_notes', '')
-        
+
         liquidity = financial_ratios['liquidity']
         profitability = financial_ratios['profitability']
         debt = financial_ratios['debt']
         benchmark = financial_ratios['benchmark_comparison']
-        health_score = financial_ratios['financial_health_score']
+        health_score = float(financial_ratios['financial_health_score'])
         summary = financial_ratios['summary']
         
 
