@@ -431,17 +431,3 @@ Contribuições são bem-vindas! Por favor:
 3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
-
-## Licença
-
-Este projeto é proprietário e confidencial.
-
-## Contato
-
-Para dúvidas ou suporte, entre em contato com a equipe de desenvolvimento.
-
----
-
-**Versão:** 1.0
-**Última Atualização:** 2025-12-09
-**Status:** Em Produção
