@@ -1,0 +1,33 @@
+{
+  "empresa": {
+    "cnpj": "12.345.678/0001-90",
+    "razao_social": "TechSolutions Inovação Ltda",
+    "setor": "Tecnologia"
+  },
+  "duplicata": {
+    "valor": 50000.00,
+    "vencimento": "2025-12-15"
+  },
+  "financeiro": {
+    "balanco_patrimonial": {
+      "ativo_circulante": 1500000.00,
+      "ativo_nao_circulante": 500000.00,
+      "passivo_circulante": 400000.00,
+      "passivo_nao_circulante": 100000.00,
+      "patrimonio_liquido": 1500000.00
+    },
+    "dre": {
+      "receita_bruta": 5000000.00,
+      "receita_liquida": 4200000.00,
+      "lucro_bruto": 2000000.00,
+      "lucro_operacional": 1200000.00,
+      "lucro_liquido": 950000.00,
+      "ebitda": 1500000.00
+    },
+    "historico_pagamentos": [
+      {"id": 1, "valor": 20000, "status": "PAGO", "dias_atraso": 0},
+      {"id": 2, "valor": 35000, "status": "PAGO", "dias_atraso": 0},
+      {"id": 3, "valor": 15000, "status": "PAGO", "dias_atraso": 0}
+    ]
+  }
+}
